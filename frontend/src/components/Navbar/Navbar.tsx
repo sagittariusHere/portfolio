@@ -16,17 +16,19 @@ function Navbar() {
       style={{
         backgroundColor: token.colorBgBase,
         boxShadow: "0 5px 4px rgba(0, 0, 0, 0.2)",
-        paddingInline: 32,
+        paddingInline: 16,
         position: "sticky",
         top: 0,
         zIndex: 1000,
+        width: "100%",
       }}
     >
       <Flex
         justify="space-between"
         align="center"
+        wrap="wrap"
         style={{
-          maxWidth: "70vw",
+          maxWidth: "90vw",
           margin: "0 auto",
           width: "100%",
         }}
@@ -45,7 +47,14 @@ function Navbar() {
             AK
           </Title>
         </div>
-        <Flex gap="middle">
+        <Flex
+          gap="middle"
+          style={{
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginTop: "10px",
+          }}
+        >
           <Button type="text" onClick={() => scrollToSection("about")}>
             About
           </Button>
