@@ -1,4 +1,4 @@
-import { Image, Flex, Tooltip } from "antd";
+import { Image, Tooltip, Row, Col } from "antd";
 import CardContainer from "../Shared/CardContainer";
 import { CSSProperties } from "react";
 
@@ -63,18 +63,35 @@ const techStack = [
     alt: "Solidity",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg",
   },
+  {
+    alt: "Vercel",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original-wordmark.svg",
+  },
+  {
+    alt: "Vercel",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/circleci/circleci-plain-wordmark.svg",
+  },
 ];
 
 export default function TechStack({ style }: TechStackProps) {
   return (
     <CardContainer title="See my diverse tech stack" style={style}>
-      <Flex wrap gap={64} justify="center" style={{ marginTop: "20px" }}>
+      <Row gutter={[24, 24]} justify="center" style={{ marginTop: "20px" }}>
         {techStack.map((tech) => (
-          <Tooltip key={tech.alt} title={tech.alt}>
-            <Image width={128} preview={false} src={tech.src} alt={tech.alt} />
-          </Tooltip>
+          <Col
+            key={tech.alt}
+            xs={12}
+            sm={8}
+            md={6}
+            lg={4}
+            style={{ textAlign: "center" }}
+          >
+            <Tooltip title={tech.alt}>
+              <Image width={96} preview={false} src={tech.src} alt={tech.alt} />
+            </Tooltip>
+          </Col>
         ))}
-      </Flex>
+      </Row>
     </CardContainer>
   );
 }

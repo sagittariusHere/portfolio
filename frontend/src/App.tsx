@@ -33,7 +33,13 @@ const customTheme: ThemeConfig = {
 function AppContent() {
   const { token } = theme.useToken();
   return (
-    <Layout style={{ backgroundColor: token.colorBgBase, minHeight: "100vh" }}>
+    <Layout
+      style={{
+        backgroundColor: token.colorBgBase,
+        minHeight: "100vh",
+        minWidth: "430px",
+      }}
+    >
       <Navbar />
       <Hero />
       <div id="about">
