@@ -1,6 +1,7 @@
 import { Button, Flex, Image } from "antd";
 import { Typography } from "antd";
 import { scrollToSection } from "../../utils/helper";
+import HeroImage from "../../assets/images/ComputerIcon.png";
 
 const { Title, Text } = Typography;
 
@@ -36,11 +37,7 @@ export default function Hero() {
         </Button>
       </Flex>
       <Flex>
-        <Image
-          width={400}
-          preview={false}
-          src="src/assets/images/ComputerIcon.png"
-        />
+        <Image width={400} preview={false} src={HeroImage} />
       </Flex>
     </Flex>
   );
