@@ -5,8 +5,8 @@ This is a **monorepo** for my personal developer **portfolio**, structured to in
 ## Structure
 
 portfolio/
-|-- frontend/ # React-based portfolio UI
-|-- backend/ # (Coming soon) Backend services
+|-- frontend/  
+|-- backend/
 
 ## Getting Started
 
