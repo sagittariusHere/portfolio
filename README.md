@@ -4,7 +4,7 @@ This is a **monorepo** for my personal developer **portfolio**, structured to in
 
 ## Structure
 
-portfolio/
+portfolio/  
 |-- frontend/  
 |-- backend/
 
