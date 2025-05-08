@@ -1,0 +1,8 @@
+@media (min-width: 768px) {
+  .nav-buttons {
+    display: flex !important;
+  }
+  .menu-button {
+    display: none !important;
+  }
+}

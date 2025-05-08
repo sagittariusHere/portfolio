@@ -39,7 +39,13 @@ export default function CardContainer({
       >
         {title && <Title style={{ marginBottom: "30px" }}>{title}</Title>}
         {subtitle && (
-          <Text style={{ maxWidth: "600px", marginBottom: "50px" }}>
+          <Text
+            style={{
+              textAlign: "center",
+              maxWidth: "700px",
+              marginBottom: "50px",
+            }}
+          >
             {subtitle}
           </Text>
         )}

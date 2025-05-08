@@ -2,6 +2,7 @@ import { Button, Form, Input, Row, Col } from "antd";
 import CardContainer from "../Shared/CardContainer";
 import TextArea from "antd/es/input/TextArea";
 import SectionTitle from "../Shared/SectionTitle";
+import { SECTIONS } from "../../constants";
 
 export default function Contact() {
   const [form] = Form.useForm();
@@ -9,6 +10,7 @@ export default function Contact() {
   return (
     <>
       <SectionTitle
+        id={SECTIONS.CONTACT}
         title="Contact Me"
         subtitle="Drop me a line, and let's make some magic happen!"
       />

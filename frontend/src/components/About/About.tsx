@@ -2,6 +2,7 @@ import { Button, Flex, theme, Typography } from "antd";
 import Tile from "../Shared/Tile";
 import TechStack from "./TechStack";
 import { scrollToSection } from "../../utils/helper";
+import { SECTIONS } from "../../constants";
 
 const { Title, Text } = Typography;
 
@@ -21,7 +22,7 @@ export default function About() {
   const { token } = theme.useToken();
 
   return (
-    <Flex vertical>
+    <Flex id={SECTIONS.ABOUT} vertical>
       <Flex
         justify="center"
         align="center"

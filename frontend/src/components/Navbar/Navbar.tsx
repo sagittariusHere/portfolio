@@ -1,14 +1,24 @@
-import { Button, Flex, theme } from "antd";
+import { Button, Drawer, Flex, theme } from "antd";
 import { Typography } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
+import { useState } from "react";
 import { scrollToSection } from "../../utils/helper";
+import NavigationButtons from "./NavigactionButtons";
+import "./Navbar.css";
+import { NAV_ITEMS } from "../../constants";
 
 const { Title } = Typography;
 
 function Navbar() {
   const { token } = theme.useToken();
+  const [open, setOpen] = useState(false);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  const showDrawer = () => setOpen(true);
+  const closeDrawer = () => setOpen(false);
+
+  const scrollAndClose = (id: string) => {
+    scrollToSection(id);
+    closeDrawer();
   };
 
   return (
@@ -26,45 +36,52 @@ function Navbar() {
       <Flex
         justify="space-between"
         align="center"
-        wrap="wrap"
         style={{
-          maxWidth: "90vw",
+          maxWidth: "90%",
           margin: "0 auto",
           width: "100%",
         }}
       >
-        <div
-          onClick={scrollToTop}
-          style={{
-            cursor: "pointer",
-            margin: "10px",
-          }}
+        <Title
+          level={2}
+          style={{ minWidth: "45px", margin: "10px", cursor: "pointer" }}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <Title
-            level={2}
-            style={{ minWidth: "45px", margin: 0, cursor: "pointer" }}
-          >
-            AK
-          </Title>
-        </div>
+          AK
+        </Title>
+
         <Flex
           gap="middle"
           style={{
-            flexWrap: "wrap",
-            justifyContent: "center",
-            marginTop: "10px",
+            display: "none",
+          }}
+          className="nav-buttons"
+        >
+          <NavigationButtons items={NAV_ITEMS} onClick={scrollToSection} />
+        </Flex>
+
+        <Button
+          type="text"
+          icon={<MenuOutlined />}
+          className="menu-button"
+          onClick={showDrawer}
+          style={{ fontSize: 20 }}
+        />
+
+        <Drawer
+          title="Navigation"
+          placement="top"
+          onClose={closeDrawer}
+          open={open}
+          height="auto"
+          style={{
+            backgroundColor: token.colorBgBase,
           }}
         >
-          <Button type="text" onClick={() => scrollToSection("about")}>
-            About
-          </Button>
-          <Button type="text" onClick={() => scrollToSection("projects")}>
-            Projects
-          </Button>
-          <Button type="text" onClick={() => scrollToSection("contact")}>
-            Contact
-          </Button>
-        </Flex>
+          <Flex vertical gap="middle">
+            <NavigationButtons items={NAV_ITEMS} onClick={scrollAndClose} />
+          </Flex>
+        </Drawer>
       </Flex>
     </Flex>
   );
