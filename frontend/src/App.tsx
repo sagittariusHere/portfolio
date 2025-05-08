@@ -37,7 +37,7 @@ function AppContent() {
       style={{
         backgroundColor: token.colorBgBase,
         minHeight: "100vh",
-        minWidth: "430px",
+        width: "100vw",
       }}
     >
       <Navbar />

@@ -68,7 +68,7 @@ const techStack = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original-wordmark.svg",
   },
   {
-    alt: "Vercel",
+    alt: "CircleCI",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/circleci/circleci-plain-wordmark.svg",
   },
 ];

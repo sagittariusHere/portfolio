@@ -37,7 +37,14 @@ export default function Hero() {
         </Button>
       </Flex>
       <Flex>
-        <Image width={400} preview={false} src={HeroImage} />
+        <Image
+          style={{
+            maxWidth: "500px",
+            height: "auto",
+          }}
+          preview={false}
+          src={HeroImage}
+        />
       </Flex>
     </Flex>
   );

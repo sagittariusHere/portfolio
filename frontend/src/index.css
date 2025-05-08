@@ -7,6 +7,7 @@
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
   font-family: var(--font-body);
   background-color: var(--background-color);
   color: var(--text-color);
@@ -16,17 +17,3 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 70px;
 }
-/* 
-@media (max-width: 429px) {
-  body {
-    transform: scale(calc(100vw / 430));
-    transform-origin: top left;
-    width: 430px;
-    overflow-x: hidden;
-  }
-
-  html, body {
-    margin: 0;
-    padding: 0;
-  }
-} */
