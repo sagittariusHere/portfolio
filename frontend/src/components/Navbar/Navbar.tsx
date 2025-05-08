@@ -3,7 +3,10 @@ import { Typography } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import { scrollToSection } from "../../utils/helper";
+import NavigationButtons from "./NavigactionButtons";
 import "./Navbar.css";
+import { NAV_ITEMS } from "../../constants";
+
 const { Title } = Typography;
 
 function Navbar() {
@@ -17,20 +20,6 @@ function Navbar() {
     scrollToSection(id);
     closeDrawer();
   };
-
-  const navButtons = (
-    <>
-      <Button type="text" onClick={() => scrollToSection("about")}>
-        About
-      </Button>
-      <Button type="text" onClick={() => scrollToSection("projects")}>
-        Projects
-      </Button>
-      <Button type="text" onClick={() => scrollToSection("contact")}>
-        Contact
-      </Button>
-    </>
-  );
 
   return (
     <Flex
@@ -48,22 +37,18 @@ function Navbar() {
         justify="space-between"
         align="center"
         style={{
-          maxWidth: "90vw",
+          maxWidth: "90%",
           margin: "0 auto",
           width: "100%",
         }}
       >
-        <div
+        <Title
+          level={2}
+          style={{ minWidth: "45px", margin: "10px", cursor: "pointer" }}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          style={{ cursor: "pointer", margin: "10px" }}
         >
-          <Title
-            level={2}
-            style={{ minWidth: "45px", margin: 0, cursor: "pointer" }}
-          >
-            AK
-          </Title>
-        </div>
+          AK
+        </Title>
 
         <Flex
           gap="middle"
@@ -72,7 +57,7 @@ function Navbar() {
           }}
           className="nav-buttons"
         >
-          {navButtons}
+          <NavigationButtons items={NAV_ITEMS} onClick={scrollToSection} />
         </Flex>
 
         <Button
@@ -94,15 +79,7 @@ function Navbar() {
           }}
         >
           <Flex vertical gap="middle">
-            <Button type="text" onClick={() => scrollAndClose("about")}>
-              About
-            </Button>
-            <Button type="text" onClick={() => scrollAndClose("projects")}>
-              Projects
-            </Button>
-            <Button type="text" onClick={() => scrollAndClose("contact")}>
-              Contact
-            </Button>
+            <NavigationButtons items={NAV_ITEMS} onClick={scrollAndClose} />
           </Flex>
         </Drawer>
       </Flex>

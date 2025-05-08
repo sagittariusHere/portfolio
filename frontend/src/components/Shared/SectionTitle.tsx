@@ -3,12 +3,14 @@ import { Flex, theme, Typography } from "antd";
 const { Title, Text } = Typography;
 
 type SectionContainerProps = {
+  id?: string;
   title?: string;
   subtitle?: string;
   children?: React.ReactNode;
 };
 
 export default function SectionTitle({
+  id,
   title,
   subtitle,
   children,
@@ -16,7 +18,13 @@ export default function SectionTitle({
   const { token } = theme.useToken();
 
   return (
-    <Flex vertical justify="center" align="center" style={{ margin: "0 50px" }}>
+    <Flex
+      id={id}
+      vertical
+      justify="center"
+      align="center"
+      style={{ margin: "0 50px" }}
+    >
       <Flex justify="center" align="center" vertical>
         {title && (
           <Title
