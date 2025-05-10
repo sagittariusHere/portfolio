@@ -4,11 +4,18 @@ import {
   LinkedinOutlined,
   MailOutlined,
 } from "@ant-design/icons";
+import { openLink } from "../../utils/helper";
 
 const { Text, Title } = Typography;
 
 export default function Footer() {
   const { token } = theme.useToken();
+
+  const onEmailMe = (email: string) => {
+    console.log("Email me clicked", `mailto:${email}`);
+    window.location.href = `mailto:${email}`;
+  };
+
   return (
     <Flex
       style={{
@@ -23,8 +30,7 @@ export default function Footer() {
     >
       <Flex
         style={{
-          width: "100%",
-          maxWidth: "70vw",
+          width: "70%",
           margin: "30px auto",
         }}
         gap="middle"
@@ -55,16 +61,23 @@ export default function Footer() {
             <Flex gap="small">
               <Button
                 style={{ borderRadius: "50%", width: "30px", padding: 0 }}
+                onClick={() => openLink("https://github.com/sagittariusHere")}
               >
                 <GithubOutlined />
               </Button>
               <Button
                 style={{ borderRadius: "50%", width: "30px", padding: 0 }}
+                onClick={() =>
+                  openLink(
+                    "https://www.linkedin.com/in/abdullah-khalid-a8a27515b/"
+                  )
+                }
               >
                 <LinkedinOutlined />
               </Button>
               <Button
                 style={{ borderRadius: "50%", width: "30px", padding: 0 }}
+                onClick={() => onEmailMe("sagittarius.here@gmail.com")}
               >
                 <MailOutlined />
               </Button>
@@ -74,7 +87,7 @@ export default function Footer() {
         <Divider style={{ borderColor: token.colorBgBlur }}></Divider>
         <Flex justify="center" align="center">
           <Text style={{ color: token.colorTextSecondary, fontSize: "12px" }}>
-            © Copyrright 2025. Made by Abdullah Khalid
+            © Copyright 2025. Made by Abdullah Khalid
           </Text>
         </Flex>
       </Flex>

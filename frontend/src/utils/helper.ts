@@ -4,3 +4,7 @@ export const scrollToSection = (id: string) => {
     el.scrollIntoView({ behavior: "smooth" });
   }
 };
+
+export const openLink = (url: string, newTab: boolean = true) => {
+  window.open(url, newTab ? "_blank" : "_self");
+};

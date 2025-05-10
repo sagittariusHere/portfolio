@@ -62,7 +62,7 @@ export default function About() {
             <Button
               size="large"
               style={{ marginTop: "20px", width: "auto" }}
-              onClick={() => scrollToSection("contact")}
+              onClick={() => scrollToSection(SECTIONS.CONTACT)}
             >
               Contact Me
             </Button>

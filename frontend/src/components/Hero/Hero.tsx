@@ -1,28 +1,26 @@
-import { Button, Flex, Image } from "antd";
-import { Typography } from "antd";
+import { Button, Col, Image, Row, Typography } from "antd";
 import { scrollToSection } from "../../utils/helper";
 import HeroImage from "../../assets/images/ComputerIcon.png";
+import { SECTIONS } from "../../constants";
 
 const { Title, Text } = Typography;
 
-const HeroStyle = {
-  margin: "6em 20px",
-};
-
 export default function Hero() {
   return (
-    <Flex style={HeroStyle} justify="space-evenly" align="center" wrap>
-      <Flex
-        justify="center"
-        align="center"
-        vertical
-        style={{ padding: "20px" }}
-        gap="large"
-      >
-        <Title style={{ textAlign: "center" }}>
-          Software Engineer | Web & Games
-        </Title>
-        <Text strong style={{ textAlign: "center", maxWidth: "600px" }}>
+    <Row
+      justify="center"
+      align="middle"
+      style={{
+        margin: "3em 40px",
+        textAlign: "center",
+      }}
+    >
+      <Col xs={24} md={14} style={{ padding: "20px" }}>
+        <Title>Software Engineer | Web & Games</Title>
+        <Text
+          strong
+          style={{ display: "block", maxWidth: "600px", margin: "0 auto" }}
+        >
           I make things that live on the web and in games. I am a software
           engineer with a passion for creating beautiful and functional
           applications.
@@ -31,21 +29,22 @@ export default function Hero() {
           type="primary"
           size="large"
           style={{ marginTop: "20px" }}
-          onClick={() => scrollToSection("projects")}
+          onClick={() => scrollToSection(SECTIONS.PROJECTS)}
         >
           Explore Projects
         </Button>
-      </Flex>
-      <Flex>
+      </Col>
+
+      <Col xs={24} md={10} style={{ textAlign: "center" }}>
         <Image
+          preview={false}
+          src={HeroImage}
           style={{
             maxWidth: "500px",
             height: "auto",
           }}
-          preview={false}
-          src={HeroImage}
         />
-      </Flex>
-    </Flex>
+      </Col>
+    </Row>
   );
 }
