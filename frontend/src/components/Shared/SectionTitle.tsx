@@ -23,7 +23,7 @@ export default function SectionTitle({
       vertical
       justify="center"
       align="center"
-      style={{ margin: "0 50px" }}
+      // style={{ margin: "0 50px" }}
     >
       <Flex justify="center" align="center" vertical>
         {title && (
