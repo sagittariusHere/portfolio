@@ -43,9 +43,11 @@ const projects = [
       title: "Pixel Potus",
       text: "Online multiplayer Trading Card Game with NFTs and cryptocurrency features.",
     },
-    techStackList: [getTechByName("Unity"), getTechByName("Blender")].filter(
-      Boolean
-    ) as TechStackItem[],
+    techStackList: [
+      getTechByName("Unity"),
+      getTechByName("Blender"),
+      getTechByName("Photon"),
+    ].filter(Boolean) as TechStackItem[],
     link: "https://www.pixelpotus.com/",
   },
   {

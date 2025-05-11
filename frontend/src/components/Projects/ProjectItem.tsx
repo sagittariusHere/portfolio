@@ -23,7 +23,12 @@ export default function ProjectItem({
     <Row align="middle">
       <Col sm={24} md={{ span: 12, order: index % 2 === 0 ? 1 : 2 }}>
         <Flex justify="center" align="center" style={{ height: "100%" }}>
-          <Image preview={false} src={imageUrl} height="auto" />
+          <Image
+            preview={false}
+            src={imageUrl}
+            height="auto"
+            style={{ borderRadius: "16px" }}
+          />
         </Flex>
       </Col>
 

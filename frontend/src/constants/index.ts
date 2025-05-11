@@ -66,6 +66,10 @@ export const TECH_STACK = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original-wordmark.svg",
   },
   {
+    alt: "Photon",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photonengine/photonengine-plain.svg",
+  },
+  {
     alt: "Solidity",
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg",
   },
