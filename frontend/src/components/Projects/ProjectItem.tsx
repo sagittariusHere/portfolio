@@ -1,4 +1,4 @@
-import { Button, Col, Flex, Image, Row, Tooltip, Typography } from "antd";
+import { Button, Card, Flex, Image, theme, Tooltip, Typography } from "antd";
 import { openLink } from "../../utils/helper";
 import { TechStackItem } from "../../types";
 
@@ -13,59 +13,78 @@ interface ProjectItemProps {
 }
 
 export default function ProjectItem({
-  index,
   imageUrl,
   description,
   techStackList,
   projectLink,
 }: ProjectItemProps) {
+  const { token } = theme.useToken();
   return (
-    <Row align="middle">
-      <Col sm={24} md={{ span: 12, order: index % 2 === 0 ? 1 : 2 }}>
-        <Flex justify="center" align="center" style={{ height: "100%" }}>
-          <Image
-            preview={false}
-            src={imageUrl}
-            height="auto"
-            style={{ borderRadius: "16px" }}
-          />
-        </Flex>
-      </Col>
-
-      <Col sm={24} md={{ span: 12, order: index % 2 === 0 ? 2 : 1 }}>
+    <Card
+      style={{
+        borderRadius: "16px",
+        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
+        background: token.colorBgContainer,
+        height: "100%",
+        display: "flex",
+      }}
+    >
+      <Flex vertical align="center" justify="space-between" style={{ height: "100%" }}>
         <Flex
           justify="center"
           align="center"
-          vertical
-          style={{ height: "100%", padding: "20px" }}
+          style={{
+            height: "200px",
+            overflow: "hidden",
+            borderRadius: "8px",
+            marginBottom: "16px",
+          }}
         >
-          <Title style={{ textAlign: "center" }}>{description.title}</Title>
+          <img
+            src={imageUrl}
+            alt="project"
+            style={{
+              maxHeight: "100%",
+              maxWidth: "100%",
+              objectFit: "contain",
+              borderRadius: "8px",
+            }}
+          />
+        </Flex>
+
+        <Flex vertical align="center" justify="center" style={{ flex: 1 }}>
+          <Title level={4} style={{ textAlign: "center", margin: "0.5em 0" }}>
+            {description.title}
+          </Title>
           <Text style={{ textAlign: "center" }}>{description.text}</Text>
+
           {techStackList && (
-            <>
-              <Title level={5} style={{ marginTop: "20px" }}>
-                Tech Stack
-              </Title>
-              <Flex justify="center" align="center" wrap="wrap" gap="middle">
-                {techStackList.map((tech, index) => (
-                  <Tooltip title={tech.alt} key={index}>
-                    <Image height={50} preview={false} src={tech.src} alt={tech.alt} />
-                  </Tooltip>
-                ))}
-              </Flex>
-            </>
-          )}
-          {projectLink && (
-            <Button
-              type="primary"
-              style={{ margin: "30px" }}
-              onClick={() => openLink(projectLink)}
+            <Flex
+              justify="center"
+              align="center"
+              wrap="wrap"
+              gap="middle"
+              style={{ marginTop: "16px" }}
             >
-              See Project
-            </Button>
+              {techStackList.map((tech, index) => (
+                <Tooltip title={tech.alt} key={index}>
+                  <Image height={50} preview={false} src={tech.src} alt={tech.alt} />
+                </Tooltip>
+              ))}
+            </Flex>
           )}
         </Flex>
-      </Col>
-    </Row>
+
+        {projectLink && (
+          <Button
+            type="primary"
+            style={{ marginTop: "25px", width: "60%" }}
+            onClick={() => openLink(projectLink)}
+          >
+            See Project
+          </Button>
+        )}
+      </Flex>
+    </Card>
   );
 }

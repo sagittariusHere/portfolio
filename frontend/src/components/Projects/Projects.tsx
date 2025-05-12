@@ -4,8 +4,10 @@ import SectionTitle from "../Shared/SectionTitle";
 import ProjectItem from "./ProjectItem";
 import Portfolio from "../../assets/images/portfolio.png";
 import Myntist from "../../assets/images/myntist.png";
-import Games from "../../assets/images/games.png";
 import Potus from "../../assets/images/potus.gif";
+import DiceMerge from "../../assets/images/dice-merge.png";
+import BubbleSort from "../../assets/images/bubble-sort.png";
+import WaterSort from "../../assets/images/water-sort.png";
 import { getTechByName } from "../../utils/helper";
 import { TechStackItem } from "../../types";
 
@@ -13,21 +15,22 @@ const projects = [
   {
     imageUrl: Portfolio,
     description: {
-      title: "Personal Website",
-      text: "Website to showcase my portfolio and projects. Built with React and TypeScript.",
+      title: "Portfolio Website",
+      text: "Personal project showcasing my portfolio. Built with React and TypeScript. Responsive design with Ant Design. Deployed on Vercel.",
     },
     techStackList: [
       getTechByName("React"),
       getTechByName("TypeScript"),
       getTechByName("Ant Design"),
+      getTechByName("Vercel"),
     ].filter(Boolean) as TechStackItem[],
     link: "https://portfolio-one-sigma-71.vercel.app/",
   },
   {
     imageUrl: Myntist,
     description: {
-      title: "Myntist - NFT Marketplace",
-      text: "Built to facilitate buying and selling of digital assets with its very own cryptocurrency MYNT token.",
+      title: "Myntist",
+      text: "Built to facilitate buying and selling of digital assets with its very own cryptocurrency MYNT token. Leverage the power of blockchain technology.",
     },
     techStackList: [
       getTechByName("React"),
@@ -41,7 +44,7 @@ const projects = [
     imageUrl: Potus,
     description: {
       title: "Pixel Potus",
-      text: "Online multiplayer Trading Card Game with NFTs and cryptocurrency features.",
+      text: "Online multiplayer Trading Card Game with NFTs and cryptocurrency features. Players can collect, trade, and battle with unique cards. Built with Unity and C#, featuring real-time multiplayer functionality using Photon.",
     },
     techStackList: [
       getTechByName("Unity"),
@@ -51,30 +54,53 @@ const projects = [
     link: "https://www.pixelpotus.com/",
   },
   {
-    imageUrl: Games,
+    imageUrl: DiceMerge,
     description: {
-      title: "Games on Google Play",
-      text: "Puzzle and board games published on Google Play Store.",
+      title: "Dice Merge",
+      text: "A fast-paced, logic-driven puzzle game featuring fluid dice merge mechanics and smooth animations. Built in Unity with C#, optimized for offline play and lightweight performance.",
     },
     techStackList: [getTechByName("Unity"), getTechByName("Blender")].filter(
       Boolean
     ) as TechStackItem[],
-    link: "https://play.google.com/store/apps/dev?id=8207153197051697284&hl",
+    link: "https://play.google.com/store/apps/details?id=com.dicedom.mergepuzzlegames.peachupacha",
+  },
+  {
+    imageUrl: BubbleSort,
+    description: {
+      title: "Ball Sort",
+      text: "A visually satisfying logic game where players sort colored balls into matching tubes. Features 1000+ levels, smooth drag-and-drop mechanics, and fluid transitions. Developed in Unity using C#, optimized for mobile performance.",
+    },
+    techStackList: [getTechByName("Unity"), getTechByName("Blender")].filter(
+      Boolean
+    ) as TechStackItem[],
+    link: "https://play.google.com/store/apps/details?id=com.ball.sortout.puzzle.game",
+  },
+  {
+    imageUrl: WaterSort,
+    description: {
+      title: "Water Sort",
+      text: "A relaxing yet challenging color-sorting puzzle where players pour colored water into tubes to group matching colors. Built with Unity and C#, featuring smooth liquid transitions, intuitive tap controls, and 1000+ progressively difficult levels.",
+    },
+    techStackList: [getTechByName("Unity"), getTechByName("Blender")].filter(
+      Boolean
+    ) as TechStackItem[],
+    link: "https://play.google.com/store/apps/details?id=com.peachupachagames.water.sort3d.puzzle.color.sorting.free",
   },
 ];
 
 export default function Projects() {
   return (
-    <div style={{ margin: "0 5%" }}>
+    <div style={{ margin: "0 5% 5% 5%" }}>
       <SectionTitle
         id={SECTIONS.PROJECTS}
         title="Projects"
-        subtitle="Here are some of my projects. Here are some of my projects. 
-        Here are some of my projects. Here are some of my projects"
+        subtitle="From interactive web apps to blockchain platforms and polished mobile games
+         — explore a diverse collection of my work across full-stack development,
+          smart contracts, and game design."
       />
       <Row justify="center" gutter={[24, 24]}>
         {projects.map((project, index) => (
-          <Col key={index} span={24}>
+          <Col key={index} sm={24} md={12} lg={12} xl={8}>
             <ProjectItem
               index={index}
               imageUrl={project.imageUrl}
