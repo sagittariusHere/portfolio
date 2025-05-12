@@ -40,6 +40,7 @@ function App() {
       colorBgBase: "#F1FAEE",
       colorBgSolid: "#1D3557",
       colorBgBlur: "#457B9D",
+      colorBgContainer: "#CDEDF0",
       colorLink: "#1890ff",
       colorSuccess: "#52c41a",
       colorError: "#ff4d4f",

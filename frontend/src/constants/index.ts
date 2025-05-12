@@ -15,7 +15,7 @@ export const NAV_ITEMS = [
 export const TECH_STACK = [
   {
     alt: "React",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
   },
   {
     alt: "Node.js",
@@ -35,7 +35,7 @@ export const TECH_STACK = [
   },
   {
     alt: "Ant Design",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/antdesign/antdesign-plain-wordmark.svg",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/antdesign/antdesign-plain.svg",
   },
   {
     alt: "HTML5",
@@ -54,16 +54,20 @@ export const TECH_STACK = [
     src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg",
   },
   {
-    alt: "Git",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original-wordmark.svg",
+    alt: "Github",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
   },
   {
     alt: "Unity",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original-wordmark.svg",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg",
   },
   {
     alt: "Blender",
-    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original-wordmark.svg",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg",
+  },
+  {
+    alt: "Photon",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photonengine/photonengine-plain.svg",
   },
   {
     alt: "Solidity",

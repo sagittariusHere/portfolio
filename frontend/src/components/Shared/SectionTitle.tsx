@@ -18,13 +18,7 @@ export default function SectionTitle({
   const { token } = theme.useToken();
 
   return (
-    <Flex
-      id={id}
-      vertical
-      justify="center"
-      align="center"
-      style={{ margin: "0 50px" }}
-    >
+    <Flex id={id} vertical justify="center" align="center">
       <Flex justify="center" align="center" vertical>
         {title && (
           <Title
@@ -45,7 +39,9 @@ export default function SectionTitle({
                 margin: "0 0 20px 0",
               }}
             />
-            <Text style={{ maxWidth: "600px", marginBottom: "50px" }}>
+            <Text
+              style={{ maxWidth: "600px", marginBottom: "50px", textAlign: "center" }}
+            >
               {subtitle}
             </Text>
           </>
