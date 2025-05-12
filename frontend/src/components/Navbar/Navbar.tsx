@@ -26,7 +26,6 @@ function Navbar() {
       style={{
         backgroundColor: token.colorBgBase,
         boxShadow: "0 5px 4px rgba(0, 0, 0, 0.2)",
-        paddingInline: 16,
         position: "sticky",
         top: 0,
         zIndex: 1000,
@@ -36,9 +35,8 @@ function Navbar() {
       <Flex
         justify="space-between"
         align="center"
+        className="container"
         style={{
-          maxWidth: "90%",
-          margin: "0 auto",
           width: "100%",
         }}
       >

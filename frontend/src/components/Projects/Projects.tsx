@@ -90,7 +90,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div style={{ margin: "0 5% 5% 5%" }}>
+    <div className="container">
       <SectionTitle
         id={SECTIONS.PROJECTS}
         title="Projects"
@@ -98,7 +98,7 @@ export default function Projects() {
          — explore a diverse collection of my work across full-stack development,
           smart contracts, and game design."
       />
-      <Row justify="center" gutter={[24, 24]}>
+      <Row justify="center" gutter={[34, 34]}>
         {projects.map((project, index) => (
           <Col key={index} sm={24} md={12} lg={12} xl={8}>
             <ProjectItem

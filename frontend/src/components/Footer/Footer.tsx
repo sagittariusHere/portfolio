@@ -1,9 +1,5 @@
 import { Button, Divider, Flex, theme, Typography } from "antd";
-import {
-  GithubOutlined,
-  LinkedinOutlined,
-  MailOutlined,
-} from "@ant-design/icons";
+import { GithubOutlined, LinkedinOutlined, MailOutlined } from "@ant-design/icons";
 import { openLink } from "../../utils/helper";
 
 const { Text, Title } = Typography;
@@ -21,7 +17,7 @@ export default function Footer() {
       style={{
         width: "100%",
         backgroundColor: token.colorPrimary,
-        paddingTop: "200px",
+        paddingTop: "150px",
         marginTop: "-200px",
       }}
       justify="center"
@@ -29,15 +25,15 @@ export default function Footer() {
       vertical
     >
       <Flex
+        className="container"
         style={{
-          width: "70%",
           margin: "30px auto",
         }}
         gap="middle"
         justify="space-between"
         vertical
       >
-        <Flex justify="space-between">
+        <Flex justify="space-between" gap="middle">
           <Flex vertical gap="small">
             <Title level={4} style={{ color: token.colorTextSecondary }}>
               Abdullah Khalid
@@ -49,9 +45,8 @@ export default function Footer() {
                 fontSize: "14px",
               }}
             >
-              I make things that live on the web and in games. I am a software
-              engineer with a passion for creating beautiful and functional
-              applications.
+              I make things that live on the web and in games. I am a software engineer
+              with a passion for creating beautiful and functional applications.
             </Text>
           </Flex>
           <Flex vertical gap="small">
@@ -68,9 +63,7 @@ export default function Footer() {
               <Button
                 style={{ borderRadius: "50%", width: "30px", padding: 0 }}
                 onClick={() =>
-                  openLink(
-                    "https://www.linkedin.com/in/abdullah-khalid-a8a27515b/"
-                  )
+                  openLink("https://www.linkedin.com/in/abdullah-khalid-a8a27515b/")
                 }
               >
                 <LinkedinOutlined />

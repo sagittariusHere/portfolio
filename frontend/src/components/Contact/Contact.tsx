@@ -8,13 +8,13 @@ export default function Contact() {
   const [form] = Form.useForm();
 
   return (
-    <>
+    <div className="container">
       <SectionTitle
         id={SECTIONS.CONTACT}
         title="Contact Me"
         subtitle="Drop me a line, and let's make some magic happen!"
       />
-      <Row justify="center">
+      <Row justify="center" style={{ width: "100%" }}>
         <Col xs={22} sm={20} md={16}>
           <CardContainer style={{ padding: "0" }}>
             <Form layout="vertical" form={form} style={{ width: "100%" }}>
@@ -25,11 +25,7 @@ export default function Contact() {
                 <Input placeholder="Your Email" />
               </Form.Item>
               <Form.Item label="Message">
-                <TextArea
-                  placeholder="Your Message"
-                  maxLength={1024}
-                  rows={6}
-                />
+                <TextArea placeholder="Your Message" maxLength={1024} rows={6} />
               </Form.Item>
               <Form.Item style={{ textAlign: "right", marginBottom: 0 }}>
                 <Button type="primary" size="large">
@@ -40,6 +36,6 @@ export default function Contact() {
           </CardContainer>
         </Col>
       </Row>
-    </>
+    </div>
   );
 }

@@ -27,9 +27,11 @@ export default function ProjectItem({
         background: token.colorBgContainer,
         height: "100%",
         display: "flex",
+        justifyContent: "center",
+        margin: "auto",
       }}
     >
-      <Flex vertical align="center" justify="space-between" style={{ height: "100%" }}>
+      <Flex vertical align="center" style={{ height: "100%" }}>
         <Flex
           justify="center"
           align="center"
@@ -68,7 +70,7 @@ export default function ProjectItem({
             >
               {techStackList.map((tech, index) => (
                 <Tooltip title={tech.alt} key={index}>
-                  <Image height={50} preview={false} src={tech.src} alt={tech.alt} />
+                  <Image height={40} preview={false} src={tech.src} alt={tech.alt} />
                 </Tooltip>
               ))}
             </Flex>
