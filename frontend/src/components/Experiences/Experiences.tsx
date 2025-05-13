@@ -3,10 +3,12 @@ import SectionTitle from "../Shared/SectionTitle";
 
 export default function Experience() {
   return (
-    <SectionTitle
-      id={SECTIONS.EXPERIENCES}
-      title="Experiences"
-      subtitle="Here are some of my experiences. Here are some of my experiences. Here are some of my experiences. Here are some of my experiences"
-    />
+    <div className="container">
+      <SectionTitle
+        id={SECTIONS.EXPERIENCES}
+        title="Experiences"
+        subtitle="Here are some of my experiences. Here are some of my experiences. Here are some of my experiences. Here are some of my experiences"
+      />
+    </div>
   );
 }

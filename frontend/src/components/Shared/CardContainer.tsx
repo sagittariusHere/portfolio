@@ -19,7 +19,6 @@ export default function CardContainer({
   return (
     <Card
       style={{
-        width: "90%",
         marginBottom: "50px",
         marginRight: "auto",
         marginLeft: "auto",
@@ -30,13 +29,7 @@ export default function CardContainer({
         ...style,
       }}
     >
-      <Flex
-        justify="center"
-        align="center"
-        vertical
-        style={{ padding: "20px" }}
-        gap="small"
-      >
+      <Flex justify="center" align="center" vertical gap="small">
         {title && <Title style={{ marginBottom: "30px" }}>{title}</Title>}
         {subtitle && (
           <Text
