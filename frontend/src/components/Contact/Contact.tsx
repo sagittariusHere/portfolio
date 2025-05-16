@@ -50,7 +50,6 @@ export default function Contact() {
                   </>
                 }
                 type="warning"
-                closable
                 showIcon
                 style={{ width: "100%" }}
               />

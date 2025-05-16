@@ -90,7 +90,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="container">
+    <div className="container" style={{ marginBottom: "50px" }}>
       <SectionTitle
         id={SECTIONS.PROJECTS}
         title="Projects"
