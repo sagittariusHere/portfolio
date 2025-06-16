@@ -11,7 +11,7 @@ interface ResponseData {
 
 export default function sendResponse({
   res,
-  success = true,
+  success,
   statusCode,
   message,
   data = null,
@@ -20,7 +20,7 @@ export default function sendResponse({
   const status = statusCode || (success ? 200 : 400);
 
   res.status(status).json({
-    success: true,
+    success,
     message,
     data,
     errors,
