@@ -2,6 +2,14 @@
 
 This is a **monorepo** for my personal developer **portfolio**, structured to include both frontend and backend projects.
 
+## Live Demo
+
+Check out the live version: https://portfolio-one-sigma-71.vercel.app/
+
+This is my personal portfolio site built with React and TypeScript. Right now, it showcases my information, but I’m planning to make it fully customizable, so anyone can clone it, update their details, and deploy for a professional portfolio in minutes.
+
+Stay tuned for updates!
+
 ## Structure
 
 portfolio/  
@@ -27,9 +35,13 @@ npm run dev
 
 ## Backend Setup
 
-Backend project will include APIs, email handler and other services.
+```bash
+cd backend
+npm install
+npm run dev
+```
 
 # Tech Stack
 
 - Frontend: React, TypeScript, Ant Design
-- Backend: (Planned) Node.js, Express, MongoDB
+- Backend: Node.js, Express, MongoDB
