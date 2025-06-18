@@ -6,27 +6,30 @@ import Footer from "./components/Footer/Footer";
 import Contact from "./components/Contact/Contact";
 import Projects from "./components/Projects/Projects";
 import Experience from "./components/Experiences/Experiences";
+import { ToastProvider } from "./context/ToastContext";
 // import useResponsiveFontSize from "./hooks/useResponsiveFontSize";
 
 function AppContent() {
   const { token } = theme.useToken();
 
   return (
-    <Layout
-      style={{
-        backgroundColor: token.colorBgBase,
-        minHeight: "100vh",
-        width: "100%",
-      }}
-    >
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <Contact />
-      <Footer />
-    </Layout>
+    <ToastProvider>
+      <Layout
+        style={{
+          backgroundColor: token.colorBgBase,
+          minHeight: "100vh",
+          width: "100%",
+        }}
+      >
+        <Navbar />
+        <Hero />
+        <About />
+        <Projects />
+        {/* <Experience /> */}
+        <Contact />
+        <Footer />
+      </Layout>
+    </ToastProvider>
   );
 }
 
