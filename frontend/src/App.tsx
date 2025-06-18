@@ -5,7 +5,6 @@ import About from "./components/About/About";
 import Footer from "./components/Footer/Footer";
 import Contact from "./components/Contact/Contact";
 import Projects from "./components/Projects/Projects";
-import Experience from "./components/Experiences/Experiences";
 import { ToastProvider } from "./context/ToastContext";
 // import useResponsiveFontSize from "./hooks/useResponsiveFontSize";
 
