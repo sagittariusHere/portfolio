@@ -25,7 +25,7 @@ function Navbar() {
     <Flex
       style={{
         backgroundColor: token.colorBgBase,
-        boxShadow: "0 5px 4px rgba(0, 0, 0, 0.2)",
+        borderBottom: `1px solid ${token.colorBorder}`,
         position: "sticky",
         top: 0,
         zIndex: 1000,

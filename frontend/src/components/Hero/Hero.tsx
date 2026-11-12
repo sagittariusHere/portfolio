@@ -1,22 +1,24 @@
-import { Button, Col, Image, Row, Typography } from "antd";
+import { Button, Col, Row, Typography } from "antd";
 import { scrollToSection } from "../../utils/helper";
-import HeroImage from "../../assets/images/ComputerIcon.png";
 import { SECTIONS } from "../../constants";
 
 const { Title, Text } = Typography;
 
 export default function Hero() {
   return (
-    <div className="container">
+    <div className="container" style={{ position: "relative" }}>
       <Row
         justify="center"
         align="middle"
         style={{
           margin: "3em 0",
           textAlign: "center",
+          position: "relative",
+          zIndex: 1,
+          minHeight: "420px",
         }}
       >
-        <Col xs={24} md={14} style={{ padding: "20px" }}>
+        <Col xs={24} md={20} lg={18} style={{ padding: "20px" }}>
           <Title>Software Engineer</Title>
           <Title level={3} style={{ margin: "16px 0" }}>
             Web & Games
@@ -33,17 +35,6 @@ export default function Hero() {
           >
             Explore Projects
           </Button>
-        </Col>
-
-        <Col xs={24} md={10} style={{ textAlign: "center" }}>
-          <Image
-            preview={false}
-            src={HeroImage}
-            style={{
-              maxWidth: "500px",
-              height: "auto",
-            }}
-          />
         </Col>
       </Row>
     </div>

@@ -12,18 +12,18 @@ export default function Tile({ text, ...rest }: TileProps) {
     <Card
       style={{
         textAlign: "center",
-        border: "none",
-        borderRadius: "8px",
-        background: token.colorBgBlur,
+        border: `1px solid rgba(241, 250, 238, 0.18)`,
+        borderRadius: "999px",
+        background: "rgba(241, 250, 238, 0.08)",
       }}
       styles={{
         body: {
-          padding: "10px 14px",
+          padding: "6px 14px",
         },
       }}
       {...rest}
     >
-      <Text style={{ color: token.colorTextSecondary }}>{text}</Text>
+      <Text style={{ color: token.colorTextSecondary, fontSize: "13px" }}>{text}</Text>
     </Card>
   );
 }

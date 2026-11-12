@@ -23,9 +23,9 @@ export default function CardContainer({
         marginRight: "auto",
         marginLeft: "auto",
         padding: "20px",
-        borderRadius: "8px",
-        backgroundColor: token.colorBgBase,
-        boxShadow: "0 0 20px rgba(0, 0, 0, 0.1)",
+        borderRadius: "12px",
+        backgroundColor: token.colorBgContainer,
+        border: `1px solid ${token.colorBorder}`,
         ...style,
       }}
     >

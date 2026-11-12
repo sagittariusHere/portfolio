@@ -22,13 +22,14 @@ export default function ProjectItem({
   return (
     <Card
       style={{
-        borderRadius: "16px",
-        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.15)",
+        borderRadius: "12px",
+        border: `1px solid ${token.colorBorder}`,
         background: token.colorBgContainer,
         height: "100%",
         display: "flex",
         justifyContent: "center",
         margin: "auto",
+        transition: "border-color 0.15s ease, transform 0.15s ease",
       }}
     >
       <Flex vertical align="center" style={{ height: "100%" }}>

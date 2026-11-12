@@ -101,7 +101,8 @@ export default function Contact() {
                 <TextArea placeholder="Your Message" maxLength={1024} rows={6} />
               </Form.Item>
               <Form.Item>
-                <Text style={{ fontSize: "0.8rem", color: "#888", fontStyle: "italic" }}>
+
+                <Text style={{ fontSize: "0.8rem", color: "#737373", fontStyle: "italic" }}>
                   *This can take upto 30 seconds to send. Please be patient.*
                 </Text>
               </Form.Item>
