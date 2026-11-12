@@ -1,42 +1,17 @@
-import { Button, Col, Row, Typography } from "antd";
-import { scrollToSection } from "../../utils/helper";
-import { SECTIONS } from "../../constants";
-
-const { Title, Text } = Typography;
+import Timeline from "./Timeline";
+import "./Hero.css";
 
 export default function Hero() {
   return (
-    <div className="container" style={{ position: "relative" }}>
-      <Row
-        justify="center"
-        align="middle"
-        style={{
-          margin: "3em 0",
-          textAlign: "center",
-          position: "relative",
-          zIndex: 1,
-          minHeight: "420px",
-        }}
-      >
-        <Col xs={24} md={20} lg={18} style={{ padding: "20px" }}>
-          <Title>Software Engineer</Title>
-          <Title level={3} style={{ margin: "16px 0" }}>
-            Web & Games
-          </Title>
-          <Text strong style={{ display: "block", maxWidth: "600px", margin: "0 auto" }}>
-            I make things that live on the web and in games. I am a software engineer with
-            a passion for creating beautiful and functional applications.
-          </Text>
-          <Button
-            type="primary"
-            size="large"
-            style={{ marginTop: "20px" }}
-            onClick={() => scrollToSection(SECTIONS.PROJECTS)}
-          >
-            Explore Projects
-          </Button>
-        </Col>
-      </Row>
-    </div>
+    <header id="timeline" className="container hero">
+      <div className="hero-intro">
+        <h1>Abdullah Khalid builds software, frame by frame.</h1>
+        <p className="muted">
+          Software engineer in Gloucester, UK. Five years across games, the web and the desktop. These
+          days I build the software behind commercial drone light shows at HVN Labs.
+        </p>
+      </div>
+      <Timeline />
+    </header>
   );
 }
